@@ -18,6 +18,7 @@ import {
   useTheme,
 } from "@mui/material";
 import { motion } from "framer-motion";
+import profileImg from "../profileImg/mitesh_img.jpg"; 
 
 const MotionTypography = motion(Typography);
 const MotionBox = motion(Box);
@@ -83,7 +84,7 @@ const About = () => {
               <Grid item xs={12} sm={4}>
                 <Avatar
                   alt="Mitesh"
-                  src="/mitesh.jpeg"
+                  src={profileImg}
                   sx={{
                     width: 150,
                     height: 150,
@@ -104,10 +105,10 @@ const About = () => {
                 <Typography variant="h4" sx={{ fontWeight: "bold", color: "blue" }}>
                   About Me
                 </Typography>
-                <Typography variant="body1" paragraph>
-                  I'm Mitesh, a passionate Full Stack Developer experienced in building scalable, user-friendly web applications using the MERN stack (MongoDB, Express.js, React.js, Node.js).
+                <Typography variant="body1" sx={{ fontWeight: "bold", color: "white" }} paragraph>
+                  I'm Mitesh, a passionate ReactJS Developer experienced in building scalable, user-friendly web applications using the Frontend stack (HTML | CSS | TailwindCSS | Material UI | Redux | React.js).
                 </Typography>
-                <Typography variant="body1" paragraph>
+                <Typography variant="body1"sx={{ fontWeight: "bold", color: "white" }} paragraph>
                   I focus on clean code, responsive design, and delivering seamless user experiences with attention to performance and maintainability.
                 </Typography>
               </MotionGrid>
@@ -129,6 +130,7 @@ const About = () => {
                   href="https://github.com/miteshDemo?tab=repositories"
                   target="_blank"
                   rel="noopener noreferrer"
+                  sx={{ fontWeight : "bold"}}
                 >
                   github.com/miteshDemo
                 </a>
@@ -145,19 +147,11 @@ const About = () => {
                   </TableRow>
                   <TableRow>
                     <TableCell>Frontend</TableCell>
-                    <TableCell>React, HTML5, CSS3, Tailwind, MUI</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>Backend</TableCell>
-                    <TableCell>Node.js, Express.js</TableCell>
-                  </TableRow>
-                  <TableRow>
-                    <TableCell>Database</TableCell>
-                    <TableCell>MongoDB</TableCell>
+                    <TableCell>React, HTML5, CSS3, Tailwind, MUI, React-Router</TableCell>
                   </TableRow>
                   <TableRow>
                     <TableCell>Other Tools</TableCell>
-                    <TableCell>Git, REST APIs, GitHub, VS Tool, VS Code</TableCell>
+                    <TableCell>GitHub, VS Code, Vercel-Host-App</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>
@@ -177,7 +171,7 @@ const About = () => {
                   </TableRow>
                   <TableRow>
                     <TableCell>Creative</TableCell>
-                    <TableCell>Videography, Editing Videos & Photos</TableCell>
+                    <TableCell>Videography, Editing Videos & Photos(Mobile)</TableCell>
                   </TableRow>
                 </TableBody>
               </Table>

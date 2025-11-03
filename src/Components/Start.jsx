@@ -13,7 +13,9 @@ import { Brightness4, Brightness7 } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 
-// Extend motion to MUI components
+// ✅ Import image correctly
+import profileImg from "../profileImg/mitesh_img.jpg"; // Adjust path if needed
+
 const MotionTypography = motion(Typography);
 const MotionBox = motion(Box);
 
@@ -30,7 +32,6 @@ const Start = ({ toggleMode, mode }) => {
 
   return (
     <>
-      {/* App Bar */}
       <AppBar position="static" sx={{ backgroundColor: "blue" }}>
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
           <MotionTypography
@@ -53,7 +54,6 @@ const Start = ({ toggleMode, mode }) => {
         </Toolbar>
       </AppBar>
 
-      {/* Main Section */}
       <Box
         sx={{
           minHeight: "calc(100vh - 64px)",
@@ -66,9 +66,10 @@ const Start = ({ toggleMode, mode }) => {
         }}
       >
         <Container maxWidth="md" sx={{ textAlign: "center" }}>
+          {/* ✅ Use imported image */}
           <Avatar
             alt="Mitesh"
-            src="/mitesh.jpeg"
+            src={profileImg}
             sx={{
               width: 150,
               height: 150,
@@ -82,7 +83,11 @@ const Start = ({ toggleMode, mode }) => {
             variant="h2"
             component="h1"
             gutterBottom
-            sx={{ fontWeight: "bold", color: "blue" }}
+            sx={{
+              fontWeight: "bold",
+              color: "blue",
+              fontFamily: "monospace",
+            }}
             initial={{ y: -30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.8 }}
@@ -94,13 +99,12 @@ const Start = ({ toggleMode, mode }) => {
             variant="h5"
             component="p"
             gutterBottom
-            sx={{ marginBottom: 4 }}
+            sx={{ marginBottom: 4, fontFamily: "monospace" }}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.8, duration: 1 }}
           >
-            A passionate Full Stack Developer focused on building clean and
-            user-friendly web applications using the MERN stack.
+            A Passionate React.js Developer
           </MotionTypography>
 
           <MotionBox
