@@ -15,6 +15,11 @@ import {
   Divider,
 } from "@mui/material";
 import { motion } from "framer-motion";
+import CodeIcon from "@mui/icons-material/Code";
+
+// ✅ Import the same background images used in Start page
+import darkBg from "../profileImg/react.jpg";       // dark mode image
+import lightBg from "../profileImg/reactlight.png"; // light mode image
 
 // Motion-enhanced components
 const MotionBox = motion(Box);
@@ -23,33 +28,41 @@ const MotionGrid = motion(Grid);
 const MotionCard = motion(Card);
 
 const projects = [
+  
   {
     title: "Calorie Tracker App",
     description:
-      "A user-friendly calorie tracking application where users can register, upload food images, and get estimated calorie counts using API.",
-    techStack: "React, Redux, Tailwind CSS, MUI, Framer-Motion, React-Router, RESTAPI",
+      "Track calories easily by uploading food images and getting estimates via API.",
+    techStack:
+      "React, Redux, Tailwind CSS, MUI, Framer-Motion, React-Router, RESTAPI",
     link: "https://github.com/miteshDemo/YorkCalorieApp1",
   },
   {
     title: "Portfolio Website",
     description:
-      "A personal portfolio showcasing my projects, skills, and experience as a Full Stack Developer.",
+      "Personal portfolio showcasing my projects, skills, and experience as a Full Stack Developer.",
     techStack: "React, MUI, Framer Motion, React Router",
     link: "https://github.com/miteshDemo/MyPortfolio",
   },
   {
     title: "Text Converter App",
     description:
-      " A Plateform that you use for Text Modification (LoverCase, UpperCase, Copy Text and Many More Functionality Included, You can Explore.)",
+      "Platform for text modification (lowercase, uppercase, copy text, and more).",
     techStack: "React, MUI, Tailwind",
     link: "https://github.com/miteshDemo/Text-Converter-React ",
   },
 ];
 
 const Navbar = () => (
-  <AppBar position="static" sx={{ backgroundColor: "blue" }}>
+  <AppBar
+    position="static"
+    sx={{
+      background: "linear-gradient(90deg, #1e3c72, #2a5298)",
+      boxShadow: "0px 4px 12px rgba(0,0,0,0.3)",
+    }}
+  >
     <Toolbar sx={{ flexWrap: "wrap", justifyContent: "space-between" }}>
-      <Typography variant="h6" sx={{ fontWeight: "bold" }}>
+      <Typography variant="h6" sx={{ fontWeight: "bold", color: "white", fontFamily: "Poppins, sans-serif" }}>
         Mitesh's Portfolio
       </Typography>
       <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
@@ -58,12 +71,11 @@ const Navbar = () => (
             key={route}
             component={Link}
             to={`/${route}`}
-            color="inherit"
             sx={{
               fontWeight: "bold",
               textTransform: "none",
-              transition: "all 0.3s ease",
-              "&:hover": { textDecoration: "underline" },
+              color: "white",
+              "&:hover": { color: "#ffd700" },
             }}
           >
             {route.charAt(0).toUpperCase() + route.slice(1)}
@@ -85,41 +97,72 @@ const Home = ({ mode }) => {
         sx={{
           minHeight: "calc(100vh - 64px)",
           py: 8,
-          bgcolor: mode === "dark" ? "grey.900" : "#f0f0f0",
+          position: "relative",
+          backgroundImage: `url(${mode === "dark" ? darkBg : lightBg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+          display: "flex",
+          alignItems: "center",
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <Container maxWidth="lg">
+        {/* Overlay for readability */}
+        <Box
+          sx={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            bgcolor: mode === "dark"
+              ? "rgba(0,0,0,0.6)"
+              : "rgba(255,255,255,0.6)",
+            zIndex: 0,
+          }}
+        />
+
+        <Container maxWidth="lg" sx={{ position: "relative", zIndex: 1 }}>
           <Paper
-            elevation={3}
+            elevation={6}
             sx={{
               p: 4,
               borderRadius: 4,
-              bgcolor: mode === "dark" ? "grey.900" : "background.paper",
+              bgcolor: mode === "dark" ? "rgba(30,30,30,0.9)" : "white",
+              backdropFilter: "blur(6px)",
               color: "inherit",
             }}
           >
             {/* Title and Back Button */}
-            <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mb: 2 }}>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                mb: 2,
+              }}
+            >
               <MotionTypography
                 variant="h4"
                 sx={{
                   fontWeight: "bold",
-                  color: "blue",
+                  fontFamily: "Poppins, sans-serif",
+                  color: mode === "dark" ? "#00bfff" : "#1e90ff",
                 }}
                 initial={{ y: -30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8 }}
               >
-                My Projects
+                🚀 My Projects
               </MotionTypography>
 
               <Button
                 variant="outlined"
                 color="primary"
                 onClick={() => navigate("/")}
+                sx={{ borderRadius: "20px", px: 3, fontWeight: "bold", fontFamily: "Poppins, sans-serif" }}
               >
                 Back
               </Button>
@@ -135,6 +178,7 @@ const Home = ({ mode }) => {
                   sm={6}
                   md={4}
                   key={index}
+                  sx={{ display: "flex" }}
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ delay: 0.2 * index, duration: 0.6 }}
@@ -145,23 +189,27 @@ const Home = ({ mode }) => {
                       display: "flex",
                       flexDirection: "column",
                       justifyContent: "space-between",
-                      boxShadow: 3,
                       borderRadius: 3,
-                      bgcolor: mode === "dark" ? "grey.700" : "background.paper",
+                      bgcolor:
+                        mode === "dark" ? "rgba(50,50,50,0.9)" : "white",
+                      boxShadow: "0px 6px 20px rgba(0,0,0,0.2)",
+                      transition: "all 0.3s ease",
                     }}
-                    whileHover={{ scale: 1.03 }}
+                    whileHover={{ scale: 1.05 }}
                   >
-                    <CardContent>
-                      <Typography variant="h6" sx={{ fontWeight: "bold" }}>
-                        {project.title}
-                      </Typography>
-                      <Typography variant="body2" sx={{ mt: 1 }}>
+                    <CardContent sx={{ flexGrow: 1 }}>
+                      <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+                        <CodeIcon color="primary" />
+                        <Typography variant="h6" sx={{ fontWeight: "bold", fontFamily: "Poppins, sans-serif" }}>
+                          {project.title}
+                        </Typography>
+                      </Box>
+                      <Typography variant="body2" sx={{ mt: 1, fontFamily: "Poppins, sans-serif" }}>
                         {project.description}
                       </Typography>
                       <Typography
                         variant="caption"
-                        color="textSecondary"
-                        sx={{ mt: 1, display: "block" }}
+                        sx={{ mt: 1, display: "block", color: "text.secondary", fontFamily: "Poppins, sans-serif" }}
                       >
                         Tech Stack: {project.techStack}
                       </Typography>
@@ -170,7 +218,17 @@ const Home = ({ mode }) => {
                     <CardActions>
                       <Button
                         size="small"
-                        color="primary"
+                        variant="contained"
+                        sx={{
+                          fontFamily: "Poppins, sans-serif",
+                          borderRadius: "20px",
+                          fontWeight: "bold",
+                          textTransform: "none",
+                          background: "linear-gradient(90deg,#1e90ff,#00bfff)",
+                          "&:hover": {
+                            background: "linear-gradient(90deg,#00bfff,#1e90ff)",
+                          },
+                        }}
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
