@@ -1,12 +1,53 @@
-# React + Vite
+## 🚀 Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal **portfolio website** built using **React.js** to showcase my skills, projects, and experience as a **Full Stack / Front-End Developer**. The portfolio highlights my journey in web development, including real-world projects, technical expertise, and contact information in a clean and responsive design.
 
-Currently, two official plugins are available:
+The website is designed with a modern UI, smooth navigation, and mobile responsiveness to provide the best user experience across all devices.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## Expanding the ESLint configuration
+* 🧑‍💻 About Me section with professional summary
+* 🛠 Skills section showcasing technical expertise
+* 📂 Projects section with live demos and source code links
+* 📞 Contact section with working contact form
+* 🌙 Light/Dark mode support
+* 📱 Fully responsive design
+* ⚡ Fast performance and clean UI
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠 Tech Stack
+
+* **Frontend:** React.js, JavaScript, HTML5, CSS3
+* **UI Library:** Material UI (MUI) / Tailwind CSS
+* **Animations:** Framer Motion
+* **Routing:** React Router
+* **Version Control:** Git & GitHub
+
+## 📁 Project Purpose
+
+This portfolio serves as:
+
+* A professional showcase of my web development skills
+* A place to demonstrate real-world React projects
+* A way for recruiters and clients to connect with me
+---
+
+## 🌐 Live Demo
+
+🔗 **Portfolio Live:** : 
+
+---
+
+## 📬 Contact
+
+If you’d like to collaborate or hire me, feel free to reach out:
+
+* 📧 Email: tmitesh391@gmail.com
+* 💼 LinkedIn: https://www.linkedin.com/in/mitesh2702/
+* 🧑‍💻 GitHub: 
+
+---
+
+## ⭐ Feedback
+
+If you like this project, feel free to ⭐ the repository.
+Suggestions and feedback are always welcome!
