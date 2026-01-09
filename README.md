@@ -43,7 +43,7 @@ If you’d like to collaborate or hire me, feel free to reach out:
 
 * 📧 Email: tmitesh391@gmail.com
 * 💼 LinkedIn: https://www.linkedin.com/in/mitesh2702/
-* 🧑‍💻 GitHub: 
+* 🧑‍💻 GitHub: https://github.com/miteshDemo
 
 ---
 
