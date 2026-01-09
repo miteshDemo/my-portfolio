@@ -1,6 +1,6 @@
 ## 🚀 Portfolio Website
 
-This is my personal **portfolio website** built using **React.js** to showcase my skills, projects, and experience as a **Full Stack / Front-End Developer**. The portfolio highlights my journey in web development, including real-world projects, technical expertise, and contact information in a clean and responsive design.
+This is my personal **portfolio website** built using **React.js** to showcase my skills, projects, and experience as a **React / Front-End Developer**. The portfolio highlights my journey in web development, including real-world projects, technical expertise, and contact information in a clean and responsive design.
 
 The website is designed with a modern UI, smooth navigation, and mobile responsiveness to provide the best user experience across all devices.
 
