@@ -21,6 +21,7 @@
     "emailjs-com": "^3.2.0",
     "express": "^5.1.0",
     "framer-motion": "^12.9.7",
+    "gsap": "^3.14.2",
     "nodemailer": "^7.0.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

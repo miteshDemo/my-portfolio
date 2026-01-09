@@ -51,6 +51,13 @@ const projects = [
     techStack: "React, MUI, Tailwind",
     link: "https://github.com/miteshDemo/Text-Converter-React ",
   },
+  {
+    title: "Modern Notes App",
+    description:
+      "A modern, clean, and feature-rich Notes Application built using React + Material UI, designed to help users create, manage, and organize their notes efficiently.",
+    techStack: "React, MUI, Tailwind",
+    link: "https://github.com/miteshDemo/Notes-App ",
+  }
 ];
 
 const Navbar = () => (
