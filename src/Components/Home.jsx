@@ -33,8 +33,8 @@ const projects = [
     description:
       "A responsive web-based Notes Application that allows users to create, edit, delete, and organize notes efficiently. The app includes features like category-based color coding, pin/unpin notes, search functionality, dark/light mode toggle, character counter, trash management with restore and permanent delete options, and localStorage data persistence. Designed with a clean UI and smooth user experience to demonstrate strong JavaScript, DOM manipulation, and front-end development skills.",
     techStack: "HTML, CSS & Javascript",
-    link: "https://modern-notes27.vercel.app/",
-    githubLink : "https://github.com/miteshDemo/Modern-Notes"
+    githubLink : "https://github.com/miteshDemo/Modern-Notes",
+    link: "https://modern-notes27.vercel.app/"
   }
 ];
 
@@ -215,7 +215,7 @@ const Home = ({ mode }) => {
                             background: "linear-gradient(90deg,#00bfff,#1e90ff)",
                           },
                         }}
-                        href={project.githubLink}
+                        href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -234,7 +234,7 @@ const Home = ({ mode }) => {
                             background: "linear-gradient(90deg,#00bfff,#1e90ff)",
                           },
                         }}
-                        href={project.link}
+                        href={project.githubLink}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
