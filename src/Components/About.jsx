@@ -43,6 +43,7 @@ const Navbar = () => (
           fontWeight: "bold",
           color: "white",
           fontFamily: "Poppins, sans-serif",
+          letterSpacing: "2px"
         }}
       >
         Mitesh's Portfolio
@@ -145,6 +146,7 @@ const About = () => {
                     fontWeight: "bold",
                     color: isDarkMode ? "#00bfff" : "#1e90ff",
                     fontFamily: "Poppins, sans-serif",
+                    letterSpacing: "2px"  
                   }}
                 >
                   About Me
@@ -156,8 +158,8 @@ const About = () => {
                 >
                   I'm Mitesh, a passionate ReactJS Developer experienced in
                   building scalable, user-friendly web applications using the
-                  Frontend stack (HTML | CSS | TailwindCSS | Material UI | Redux
-                  | React.js).
+                  Frontend stack (HTML | CSS | Javascript | TailwindCSS | Material UI | Redux
+                  | ReactJs).
                 </Typography>
                 <Typography
                   variant="body1"
@@ -185,6 +187,7 @@ const About = () => {
                   mb: 2,
                   color: isDarkMode ? "#00bfff" : "blue",
                   fontFamily: "Poppins, sans-serif",
+                  letterSpacing: "2px"
                 }}
               >
                 GitHub
@@ -214,6 +217,7 @@ const About = () => {
                   mb: 2,
                   color: isDarkMode ? "#00bfff" : "blue",
                   fontFamily: "Poppins, sans-serif",
+                  letterSpacing: "2px"
                 }}
               >
                 Skills & Tools
@@ -269,6 +273,7 @@ const About = () => {
                   mb: 2,
                   color: isDarkMode ? "#00bfff" : "blue",
                   fontFamily: "Poppins, sans-serif",
+                  letterSpacing: "2px"
                 }}
               >
                 Hobbies

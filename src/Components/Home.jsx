@@ -28,35 +28,13 @@ const MotionGrid = motion(Grid);
 const MotionCard = motion(Card);
 
 const projects = [
-  
   {
-    title: "Calorie Tracker App",
+    title: "Modern-Notes",
     description:
-      "Track calories easily by uploading food images and getting estimates via API.",
-    techStack:
-      "React, Redux, Tailwind CSS, MUI, Framer-Motion, React-Router, RESTAPI",
-    link: "https://github.com/miteshDemo/YorkCalorieApp1",
-  },
-  {
-    title: "Portfolio Website",
-    description:
-      "Personal portfolio showcasing my projects, skills, and experience as a Full Stack Developer.",
-    techStack: "React, MUI, Framer Motion, React Router",
-    link: "https://github.com/miteshDemo/MyPortfolio",
-  },
-  {
-    title: "Text Converter App",
-    description:
-      "Platform for text modification (lowercase, uppercase, copy text, and more).",
-    techStack: "React, MUI, Tailwind",
-    link: "https://github.com/miteshDemo/Text-Converter-React ",
-  },
-  {
-    title: "Modern Notes App",
-    description:
-      "A modern, clean, and feature-rich Notes Application built using React + Material UI, designed to help users create, manage, and organize their notes efficiently.",
-    techStack: "React, MUI, Tailwind",
-    link: "https://github.com/miteshDemo/Notes-App ",
+      "A responsive web-based Notes Application that allows users to create, edit, delete, and organize notes efficiently. The app includes features like category-based color coding, pin/unpin notes, search functionality, dark/light mode toggle, character counter, trash management with restore and permanent delete options, and localStorage data persistence. Designed with a clean UI and smooth user experience to demonstrate strong JavaScript, DOM manipulation, and front-end development skills.",
+    techStack: "HTML, CSS & Javascript",
+    link: "https://modern-notes27.vercel.app/",
+    githubLink : "https://github.com/miteshDemo/Modern-Notes"
   }
 ];
 
@@ -69,7 +47,7 @@ const Navbar = () => (
     }}
   >
     <Toolbar sx={{ flexWrap: "wrap", justifyContent: "space-between" }}>
-      <Typography variant="h6" sx={{ fontWeight: "bold", color: "white", fontFamily: "Poppins, sans-serif" }}>
+      <Typography variant="h6" sx={{ fontWeight: "bold", color: "white", fontFamily: "Poppins, sans-serif", letterSpacing: "2px" }}>
         Mitesh's Portfolio
       </Typography>
       <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
@@ -142,7 +120,7 @@ const Home = ({ mode }) => {
               color: "inherit",
             }}
           >
-            {/* Title and Back Button */}
+
             <Box
               sx={{
                 display: "flex",
@@ -157,6 +135,7 @@ const Home = ({ mode }) => {
                   fontWeight: "bold",
                   fontFamily: "Poppins, sans-serif",
                   color: mode === "dark" ? "#00bfff" : "#1e90ff",
+                  letterSpacing: "2px"
                 }}
                 initial={{ y: -30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
@@ -218,7 +197,7 @@ const Home = ({ mode }) => {
                         variant="caption"
                         sx={{ mt: 1, display: "block", color: "text.secondary", fontFamily: "Poppins, sans-serif" }}
                       >
-                        Tech Stack: {project.techStack}
+                        Tech Stack : {project.techStack}
                       </Typography>
                     </CardContent>
 
@@ -236,11 +215,30 @@ const Home = ({ mode }) => {
                             background: "linear-gradient(90deg,#00bfff,#1e90ff)",
                           },
                         }}
+                        href={project.githubLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Live Demo
+                      </Button>
+                      <Button
+                        size="small"
+                        variant="contained"
+                        sx={{
+                          fontFamily: "Poppins, sans-serif",
+                          borderRadius: "20px",
+                          fontWeight: "bold",
+                          textTransform: "none",
+                          background: "linear-gradient(90deg,#1e90ff,#00bfff)",
+                          "&:hover": {
+                            background: "linear-gradient(90deg,#00bfff,#1e90ff)",
+                          },
+                        }}
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
-                        View Project
+                        Github
                       </Button>
                     </CardActions>
                   </MotionCard>

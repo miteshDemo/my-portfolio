@@ -36,7 +36,7 @@ const Navbar = () => {
         <Typography
           variant="h6"
           component="div"
-          sx={{ flexGrow: 1, fontWeight: "bold", color: "white" }}
+          sx={{ flexGrow: 1, fontWeight: "bold", color: "white", letterSpacing: "2px", fontFamily: "Poppins, sans-serif" }}
         >
           Mitesh's Portfolio
         </Typography>
@@ -111,6 +111,7 @@ const Contact = ({ mode }) => {
               textAlign: "center",
               color: mode === "dark" ? "#00bfff" : "#1e90ff",
               mb: 4,
+              letterSpacing: "2px"
             }}
             initial={{ y: -30, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
@@ -128,7 +129,7 @@ const Contact = ({ mode }) => {
               backdropFilter: "blur(6px)",
             }}
           >
-            <Typography variant="h6" fontWeight="bold" sx={{fontFamily: "Poppins, sans-serif"}} gutterBottom>
+            <Typography variant="h6" fontWeight="bold" sx={{fontFamily: "Poppins, sans-serif", letterSpacing: "2px"}} gutterBottom>
               Contact Details
             </Typography>
             <Divider sx={{ mb: 2 }} />
@@ -177,7 +178,7 @@ const Contact = ({ mode }) => {
             <Button
               variant="contained"
               startIcon={<DescriptionIcon />}
-              href="https://drive.google.com/file/d/1v7islHkKs4uJuno3l8Hbm4ZbCRoG5S7w/view?usp=sharing"
+              href="https://drive.google.com/file/d/1ygHiS5Ijo-JbjV9OMt6A6L5Gx_kVz7b5/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               sx={{
